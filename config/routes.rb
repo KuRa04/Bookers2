@@ -6,8 +6,14 @@ root 'homes#index'
 get "home/about" => "homes#about",as:'about'
 get 'users' => 'users#index'
 
-resources :books, only: [:new, :create, :index, :show, :edit, :update, :destroy] 
 
 resources :users, only:[:index, :show, :edit, :update, :create, :new]
+
+resources :books, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
+  resource :favorites, only: [:create, :destroy]
+ 
+ end
+ 
+ 
 end
 
