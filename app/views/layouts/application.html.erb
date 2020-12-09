@@ -28,45 +28,45 @@
           <ul class ="navbar-nav ml-auto" >
     <% if user_signed_in? %>
     
-  <li ><%= link_to user_path(current_user) do%>
+  <li><%= link_to user_path(current_user),:style=>"color:white;" do%>
   <i class="fas fa-home"></i>
-  <span>Home</span>
+  <span> Home</span>
   <% end %></li>
   
-    <li><%= link_to users_path do%>
+    <li><%= link_to users_path,:style=>"color:white;" do%>
     <i class="fas fa-users"></i>
-    <span>Users</span>
+    <span> Users</span>
     <% end %></li>
     
-   <li><%= link_to books_path do%>
+   <li><%= link_to books_path,:style=>"color:white;" do%>
    <i class="fas fa-book-open"></i>
-   <span>Books</span>
+   <span> Books</span>
    <% end %></li>
    
-  <li><%= link_to destroy_user_session_path, method: :delete do %>
+  <li><%= link_to destroy_user_session_path,:style=>"color:white;", method: :delete do %>
   <i class="fas fa-sign-out-alt"></i>
-  <span>logout</span>
+  <span> logout</span>
   <% end %></li>
   
      <% else %>
-   <li><%= link_to root_path do%>
+   <li><%= link_to root_path,:style=>"color:white;" do%>
     <i class="fas fa-home"></i>
-  <span>Home</span>
+  <span> Home</span>
    <% end %></li>
    
-   <li><%= link_to about_path do%>
+   <li><%= link_to about_path,:style=>"color:white;" do%>
    <i class="fas fa-link"></i>
-   <span>About</span>
+   <span> About</span>
    <% end %></li>
    
-   <li><%= link_to  new_user_registration_path do%>
+   <li><%= link_to  new_user_registration_path,:style=>"color:white;" do%>
    <i class="fas fa-user-plus"></i>
-   <span>sign up</span>
+   <span> sign up</span>
    <% end %></li>
    
-   <li><%= link_to new_user_session_path do%>
+   <li><%= link_to new_user_session_path,:style=>"color:white;" do%>
    <i class="fas fa-sign-in-alt"></i>
-   <span>login</span>
+   <span> login</span>
    <% end %></li>
    
     <% end %>
@@ -75,19 +75,17 @@
   </div>
 </nav>
 </header>
-<div class="container">
-      <p id="notice"><%= notice %></p> 
-      <p class="alert"><%= alert %></p>
-    </div>
+    <p id="notice"><%= notice %></p> 
+  
     <main>
       <div class="container">
         <%= yield %>
       </div>
     </main>
 
-    <div class='container'>
-      <div class='row'>
-        <div class='col-md-offset-9 col-md-3'>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="mx-auto">
           <p>CopyRight Infratop.inc</p>
         </div>
       </div>

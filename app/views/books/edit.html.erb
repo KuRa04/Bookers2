@@ -15,20 +15,26 @@
  <% end %>
 
 <%= form_for(@book) do |f| %> 
-   <div class="field row">
-	<p>Title</p>
+   <div class="form-group">
+	<label>Title</label>
+	</br>
 	<%= f.text_field :title, class: "col-xs-12" %>
    </div>
-   <div class="field row">
-	<p>Opinipn</p>
+   
+   <div class="form-group">
+	<label>Opinipn</label>
+	</br>
 	<%= f.text_area :body, class: "col-xs-12" %>
    </div>
-	<div class="field row">
-	<br><%= f.submit "Update Book", class: "btn btn-primary col-xs-12"%></br>
+   
+	<div class="form-group">
+
+	<br><%= f.submit "Update Book", class: "btn btn-success col-xs-12"%></br>
     </div>
+    
 <% end %> 
 <%= link_to "Show", @book, class: "book_#{@book.id}" %>
-   
+   |
 <%= link_to "Back", books_path, class: "back" %>
 
 </div>
