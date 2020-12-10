@@ -30,6 +30,7 @@ end
 
 def  show
   @book = Book.find(params[:id])
+  @book_comment = BookComment.new #add 12/9
   
   @book = Book.find(params[:id]) #add 12/4
   @user = @book.user             #add 12/4

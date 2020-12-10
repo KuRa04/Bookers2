@@ -10,9 +10,9 @@ get 'users' => 'users#index'
 resources :users, only:[:index, :show, :edit, :update, :create, :new]
 
 resources :books, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
-  resource :favorites, only: [:create, :destroy]
- 
- end
+	 resource :favorites, only: [:create, :destroy]
+	resources :book_comments, only: [:create, :destroy]
+end
  
  
 end

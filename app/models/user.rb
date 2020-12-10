@@ -6,6 +6,8 @@ class User < ApplicationRecord
          
           has_many :books, dependent: :destroy #add 12/4
           
+          has_many :book_comments, dependent: :destroy #12/9
+          
            has_many :favorites, dependent: :destroy #add 12/8
          
           attachment :profile_image
